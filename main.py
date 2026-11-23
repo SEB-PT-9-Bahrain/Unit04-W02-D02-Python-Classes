@@ -1,0 +1,47 @@
+my_name = 'Omar'
+
+print(type([1,2,3]))
+
+# Creating a new class
+class BankAccount():
+    # 1. ALL classes have __init__(self) method
+    # 2. ALL methods in python take self as first argument
+    def __init__(self, owner_param, balance_param = 100):
+        print('NEW ACCOUNT CREATED')
+        self.owner = owner_param
+        self.balance = balance_param
+    def print_balance_nicely(self):
+        print(f'you {self.owner} have ${self.balance}')
+
+    def withdraw(self, amount_to_withdraw):
+        self.balance -= amount_to_withdraw
+
+
+# Creates a new instance of the class
+abdullah_account = BankAccount('Abdullah',200)
+
+abdullah_account.balance = 500
+
+print(abdullah_account.balance)
+
+ahmed_account = BankAccount('Ahmed',250)
+
+abdullah_account.print_balance_nicely()
+ahmed_account.print_balance_nicely()
+
+
+ahmed_account.withdraw(100)
+ahmed_account.print_balance_nicely()
+
+
+ammar_account = BankAccount('Ammar')
+
+
+
+
+# exercise 1: create a class called Student
+# this class should have the following attributes: name and country
+# if the country is not provided default to 'Bahrain'
+# this class should have 1 method introduce_self(self): which should print
+# my name is {name} and I am from {country}
+
