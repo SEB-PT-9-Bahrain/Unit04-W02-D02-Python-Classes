@@ -50,6 +50,7 @@ class Student():
     def __init__(self, name, country = 'Bahrain'):
         self.name = name
         self.country = country
+        self.teacher = 'Omar'
     def introduce_self(self):
         print(f'my name is {self.name} and I am from {self.country}')
     def __str__(self):
@@ -57,8 +58,12 @@ class Student():
     
 
 mahdi_student = Student('Mahdi')
+abdullah_student = Student('Abdullah')
 
 mahdi_student.introduce_self()
 
 
 print(mahdi_student)
+
+print(mahdi_student.teacher)
+print(abdullah_student.teacher)
