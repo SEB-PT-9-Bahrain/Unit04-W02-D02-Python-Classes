@@ -95,7 +95,12 @@ class Teacher(GAEmployee):
         super().__init__(name, fridge_code)
         self.courses_taught = courses_taught
 
+    def introduce_self(self):
+        print(f'Hello my name is {self.name} and I TEACH at GA')
+
 
 omar_teacher = Teacher('Omar',112,['Java','JavaScript','Python'])
 
-print(omar_teacher)
+
+
+omar_teacher.introduce_self()
