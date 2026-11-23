@@ -47,14 +47,19 @@ ammar_account = BankAccount('Ammar')
 
 
 class Student():
+    teacher = 'Omar'
     def __init__(self, name, country = 'Bahrain'):
         self.name = name
         self.country = country
-        self.teacher = 'Omar'
     def introduce_self(self):
         print(f'my name is {self.name} and I am from {self.country}')
     def __str__(self):
         return f'Name: {self.name}, country:{self.country}'
+
+    @classmethod
+    def change_teacher(cls, new_teacher):
+        print(cls)
+        cls.teacher = new_teacher
     
 
 mahdi_student = Student('Mahdi')
@@ -65,5 +70,12 @@ mahdi_student.introduce_self()
 
 print(mahdi_student)
 
+Student.teacher = 'Sayed Hamed'
+
 print(mahdi_student.teacher)
 print(abdullah_student.teacher)
+
+
+Student.change_teacher('Jameela')
+
+print(Student.teacher)
