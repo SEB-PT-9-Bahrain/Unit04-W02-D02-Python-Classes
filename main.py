@@ -79,3 +79,23 @@ print(abdullah_student.teacher)
 Student.change_teacher('Jameela')
 
 print(Student.teacher)
+
+
+class GAEmployee():
+    def __init__(self, name, fridge_code):
+        self.name = name
+        self.fridge_code = fridge_code
+
+    def introduce_self(self):
+        print(f'Hello my name is {self.name} and I Work at GA')
+
+
+class Teacher(GAEmployee):
+    def __init__(self, name, fridge_code, courses_taught):
+        super().__init__(name, fridge_code)
+        self.courses_taught = courses_taught
+
+
+omar_teacher = Teacher('Omar',112,['Java','JavaScript','Python'])
+
+print(omar_teacher)
