@@ -45,3 +45,20 @@ ammar_account = BankAccount('Ammar')
 # this class should have 1 method introduce_self(self): which should print
 # my name is {name} and I am from {country}
 
+
+class Student():
+    def __init__(self, name, country = 'Bahrain'):
+        self.name = name
+        self.country = country
+    def introduce_self(self):
+        print(f'my name is {self.name} and I am from {self.country}')
+    def __str__(self):
+        return f'Name: {self.name}, country:{self.country}'
+    
+
+mahdi_student = Student('Mahdi')
+
+mahdi_student.introduce_self()
+
+
+print(mahdi_student)
